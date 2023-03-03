@@ -1,1 +1,1 @@
-# Tche-news
+# Tech-news
