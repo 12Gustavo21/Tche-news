@@ -3,7 +3,7 @@ import GlobalStyle from "./global/style";
 import * as S from "./style";
 import Lupa from "./img/Lupa.svg";
 import Heart from "./components/Heart";
-import newsData from "./noticias";
+import newsData from "./news.json";
 
 export default function App() {
   const [query, setQuery] = useState("");
