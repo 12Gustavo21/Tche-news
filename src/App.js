@@ -10,7 +10,9 @@ export default function App() {
   const [results, setResults] = useState([]);
 
   const getNews = () => {
-    const data = newsData.map((news) => ({ ...news }));
+    const data = newsData.map((news) => ({
+      ...news
+    }));
     setResults(data);
   };
 
@@ -32,6 +34,12 @@ export default function App() {
     setResults(filteredNews);
   }
 
+  function getCurrentYear() {
+    const year = new Date().getFullYear();
+    return year;
+  }
+  
+
   return (
     <>
       <GlobalStyle />
@@ -52,28 +60,32 @@ export default function App() {
           </S.BoxTwo>
         </S.HeaderContainer>
       </S.Header>
-      <main>
-        <section>
+      <S.Main>
+        <S.MainContainer>
           {results.length > 0 ? (
             results.map((news) => (
-              <section key={news.id}>
-                <section>
+              <S.NewsContainer key={news.id}>
+                <S.Informations>
                   <h2>{news.date}</h2>
                   <Heart />
-                </section>
-                <section>
+                </S.Informations>
+                <S.Description>
                   <h3>{news.title}</h3>
                   <p>{news.description}</p>
-                </section>
-              </section>
+                </S.Description>
+              </S.NewsContainer>
             ))
           ) : (
-            <section>
-              <h2>Não encontramos nenhum resultado para sua pesquisa</h2>
-            </section>
+            <S.ErrorContainer>
+              <h4>We didn't find anything, sorry :(</h4>
+            </S.ErrorContainer>
           )}
-        </section>
-      </main>
+        </S.MainContainer>
+      </S.Main>
+      <S.Footer>
+        <p>Copyright &copy {getCurrentYear()} <a href="https://www.instagram.com/iuricode/" target="_blank"
+          rel="noopener noreferrer">  @iuricode </a> </p>
+      </S.Footer>
     </>
   );
 }
