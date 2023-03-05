@@ -35,7 +35,7 @@ export const BoxOne = styled.section`
         color: #fff;
     }
 
-    @media only screen and (width <= 565px) {
+    @media only screen and (width <= 768px) {
         width: 80%;
     }
 `;
@@ -82,8 +82,18 @@ export const BoxTwo = styled.section`
         z-index: 1;
     }
 
-    @media only screen and (width <= 565px) {
+    @media only screen and (width <= 768px) {
         width: 80%;
+
+        #Lupa {
+            left: 3%;
+        }
+    }
+
+    @media only screen and (width <= 525px) {
+        #Lupa {
+            left: 5%;
+        }
     }
 `;
 

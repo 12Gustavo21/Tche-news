@@ -70,7 +70,6 @@ export default function App() {
     origin: "top",
     distance: "25px",
     duration: 500,
-    reset: true,
   });
 
   return (
