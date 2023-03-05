@@ -40,8 +40,8 @@ export default function App() {
   }
 
   const ScrollReveal = require("scrollreveal").default;
-  
-  ScrollReveal().reveal(".BoxOne", { 
+
+  ScrollReveal().reveal(".BoxOne", {
     delay: 75,
     origin: "top",
     distance: "25px",
@@ -116,8 +116,8 @@ export default function App() {
         </S.MainContainer>
       </S.Main>
       <S.Footer className="Footer">
-        <p>Copyright &copy {getCurrentYear()} <a href="https://www.instagram.com/iuricode/" target="_blank"
-          rel="noopener noreferrer">  @iuricode </a> </p>
+        <p>Copyright © {getCurrentYear()}<a href="https://www.instagram.com/iuricode/" target="_blank"
+          rel="noopener noreferrer">@iuricode</a></p>
       </S.Footer>
     </>
   );

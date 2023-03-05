@@ -34,6 +34,10 @@ export const BoxOne = styled.section`
         text-align: right;
         color: #fff;
     }
+
+    @media only screen and (width <= 565px) {
+        width: 80%;
+    }
 `;
 
 export const BoxTwo = styled.section`
@@ -77,6 +81,10 @@ export const BoxTwo = styled.section`
         cursor: pointer;
         z-index: 1;
     }
+
+    @media only screen and (width <= 565px) {
+        width: 80%;
+    }
 `;
 
 export const Main = styled.main`
@@ -101,6 +109,10 @@ export const NewsContainer = styled.section`
     height: 13%;
     background-color: #fff;
     padding: 1rem;
+
+    @media only screen and (width <= 768px) {
+        width: 85%;
+    }
 `;
 
 export const Informations = styled.section`
@@ -203,5 +215,11 @@ export const Footer = styled.footer`
 
     a:hover::after {
         transform: scaleX(1);
+    }
+
+    @media only screen and (320px <= width <= 345px) {
+        p, a {
+            font-size: 1.3rem;
+        }
     }
 `;
