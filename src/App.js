@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GlobalStyle from "./global/style";
 import * as S from "./style";
-import Lupa from "./img/Lupa.svg";
+import Lupa from "./assets/Lupa.svg";
 import Heart from "./components/Heart";
 import newsData from "./news.json";
 
