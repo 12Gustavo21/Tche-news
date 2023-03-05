@@ -38,18 +38,51 @@ export default function App() {
     const year = new Date().getFullYear();
     return year;
   }
+
+  const ScrollReveal = require("scrollreveal").default;
   
+  ScrollReveal().reveal(".BoxOne", { 
+    delay: 75,
+    origin: "top",
+    distance: "25px",
+    duration: 500,
+    reset: true,
+  });
+
+  ScrollReveal().reveal(".BoxTwo", {
+    delay: 200,
+    origin: "top",
+    distance: "25px",
+    duration: 500,
+    reset: true,
+  });
+
+  ScrollReveal().reveal(".MainContainer", {
+    delay: 300,
+    origin: "top",
+    distance: "25px",
+    duration: 500,
+    reset: true,
+  });
+
+  ScrollReveal().reveal(".Footer", {
+    delay: 75,
+    origin: "top",
+    distance: "25px",
+    duration: 500,
+    reset: true,
+  });
 
   return (
     <>
       <GlobalStyle />
       <S.Header>
         <S.HeaderContainer>
-          <S.BoxOne>
+          <S.BoxOne className="BoxOne">
             <h1>Codelândia</h1>
             <p>blog</p>
           </S.BoxOne>
-          <S.BoxTwo>
+          <S.BoxTwo className="BoxTwo">
             <img src={Lupa} alt="search" id="Lupa" />
             <input
               type="text"
@@ -61,7 +94,7 @@ export default function App() {
         </S.HeaderContainer>
       </S.Header>
       <S.Main>
-        <S.MainContainer>
+        <S.MainContainer className="MainContainer">
           {results.length > 0 ? (
             results.map((news) => (
               <S.NewsContainer key={news.id}>
@@ -82,7 +115,7 @@ export default function App() {
           )}
         </S.MainContainer>
       </S.Main>
-      <S.Footer>
+      <S.Footer className="Footer">
         <p>Copyright &copy {getCurrentYear()} <a href="https://www.instagram.com/iuricode/" target="_blank"
           rel="noopener noreferrer">  @iuricode </a> </p>
       </S.Footer>

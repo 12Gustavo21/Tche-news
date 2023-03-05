@@ -45,7 +45,7 @@ export const BoxTwo = styled.section`
     align-items: center;
 
     input {
-        width: 50%;
+        width: 100%;
         height: 3rem;
         position: absolute;
         background: rgba(255, 255, 255, 0.2);
