@@ -1,9 +1,21 @@
 import React, { useEffect, useState } from "react";
+
+//GlobalStyle
 import GlobalStyle from "./global/style";
+
+//Styles
 import * as S from "./style";
-import Lupa from "./assets/Lupa.svg";
+
+//Images
+import magnifyingGlass from "./img/magnifyingGlass.svg";
+
+//Components
 import Heart from "./components/Heart";
 import newsData from "./news.json";
+
+//AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -11,13 +23,14 @@ export default function App() {
 
   const getNews = () => {
     const data = newsData.map((news) => ({
-      ...news
+      ...news,
     }));
     setResults(data);
   };
 
   useEffect(() => {
     getNews();
+    AOS.init({});
   }, []);
 
   function handleSearch(event) {
@@ -39,50 +52,35 @@ export default function App() {
     return year;
   }
 
-  const ScrollReveal = require("scrollreveal").default;
-
-  ScrollReveal().reveal(".BoxOne", {
-    delay: 75,
-    origin: "top",
-    distance: "25px",
-    duration: 500,
-    reset: true,
-  });
-
-  ScrollReveal().reveal(".BoxTwo", {
-    delay: 200,
-    origin: "top",
-    distance: "25px",
-    duration: 500,
-    reset: true,
-  });
-
-  ScrollReveal().reveal(".MainContainer", {
-    delay: 300,
-    origin: "top",
-    distance: "25px",
-    duration: 500,
-    reset: true,
-  });
-
-  ScrollReveal().reveal(".Footer", {
-    delay: 75,
-    origin: "top",
-    distance: "25px",
-    duration: 500,
-  });
+  function handleHeartClick(newsId) {
+    const newsContainer = document.querySelector(
+      `.NewsContainer[data-id="${newsId}"]`
+    );
+    if (newsContainer) {
+      newsContainer.classList.toggle("active");
+    }
+  }
 
   return (
     <>
       <GlobalStyle />
       <S.Header>
         <S.HeaderContainer>
-          <S.BoxOne className="BoxOne">
-            <h1>Codelândia</h1>
-            <p>blog</p>
+          <S.BoxOne
+            className="BoxOne"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h1>
+              <span>Code</span>lândia
+            </h1>
           </S.BoxOne>
-          <S.BoxTwo className="BoxTwo">
-            <img src={Lupa} alt="search" id="Lupa" />
+          <S.BoxTwo
+            className="BoxTwo"
+            data-aos="fade-up"
+            data-aos-duration="1250"
+          >
+            <img src={magnifyingGlass} alt="search" id="magnifyingGlass" />
             <input
               type="text"
               placeholder="Pesquisar no blog"
@@ -93,13 +91,19 @@ export default function App() {
         </S.HeaderContainer>
       </S.Header>
       <S.Main>
-        <S.MainContainer className="MainContainer">
+        <S.MainContainer>
           {results.length > 0 ? (
             results.map((news) => (
-              <S.NewsContainer key={news.id}>
+              <S.NewsContainer
+                key={news.id}
+                className="NewsContainer"
+                data-id={news.id}
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 <S.Informations>
                   <h2>{news.date}</h2>
-                  <Heart />
+                  <Heart onHeartClick={() => handleHeartClick(news.id)} />
                 </S.Informations>
                 <S.Description>
                   <h3>{news.title}</h3>
@@ -114,9 +118,17 @@ export default function App() {
           )}
         </S.MainContainer>
       </S.Main>
-      <S.Footer className="Footer">
-        <p>Copyright © {getCurrentYear()}<a href="https://www.instagram.com/iuricode/" target="_blank"
-          rel="noopener noreferrer">@iuricode</a></p>
+      <S.Footer>
+        <p>
+          Copyright © {getCurrentYear()}
+          <a
+            href="https://www.instagram.com/iuricode/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @iuricode
+          </a>
+        </p>
       </S.Footer>
     </>
   );

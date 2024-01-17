@@ -5,7 +5,7 @@
 ## Challenge [01] Codelândia
 >Look the design: https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO
 
-<img width ='600px' src ='src/assets/Recording.gif' />
+<img width ='800px' src ='src/img/home-print.png' />
 
 *Technologies*
 
@@ -23,4 +23,4 @@
  ## 💻 Online Page: https://tech-news-12gustavo21.vercel.app
 
 ## 🌐 Contact me:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/gualmda) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/gustavo-almeida-421044246)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/gualmda) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/12Gustavo21)

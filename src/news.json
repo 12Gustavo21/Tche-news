@@ -1,30 +1,23 @@
 [
     {
         "id": 1,
-        "date": "02 de jul, 2021",
+        "date": "17 de ago, 2024",
         "heart": "src/img/Heart.svg",
-        "title": "Agora é oficial: o Windows 11 está vindo",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis."
+        "title": "O que é linguagem de programação? Conheça as principais",
+        "description": "Uma das mais populares vertentes da tecnologia da informação, a área de programação segue tendo muita demanda de trabalho justamente pela velocidade com que dispositivos tecnológicos vêm avançando."
     },
     {
         "id": 2,
-        "date": "02 de jul, 2021",
+        "date": "12 de jul, 2024",
         "heart": "src/img/Heart.svg",
-        "title": "Tim Berners-Lee vai leiloar código-fonte da web",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis. Praesent et auctor justo. Vestibulum nisl orci, lacinia venenatis leo sit amet, pulvinar tincidunt risus. Phasellus nisl dui, cursus a lectus et, interdum ullamcorper libero."
+        "title": "GitHub agora permite fazer login sem precisar de senha",
+        "description": "O GitHub anunciou nesta quarta-feira (12) o acesso a partir das passkeys, método de autenticação sem senhas. A novidade está disponível em uma versão beta pública e pode substituir a autenticação em dois fatores."
     },
     {
         "id": 3,
-        "date": "02 de jul, 2021",
+        "date": "21 de jun, 2024",
         "heart": "src/img/Heart.svg",
-        "title": "Tem Firefox novo no pedaço e você vai querer migrar",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est."
-    },
-    {
-        "id": 4,
-        "date": "02 de jul, 2021",
-        "heart": "src/img/Heart.svg",
-        "title": "John McAfee, criador do antivírus McAfee, morre",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis. Praesent et auctor justo. Vestibulum nisl orci, lacinia venenatis leo sit amet, pulvinar tincidunt risus. Phasellus nisl dui, cursus a lectus et, interdum ullamcorper libero."
+        "title": "Por que os hiperlinks são azuis em sua maioria?",
+        "description": "Quem navega na internet, certamente já percebeu que ela conta com diversos recursos para tornar a nossa vida mais fácil. Entre essas opções podemos mencionar os hiperlinks – uma palavra ou termo clicável que direciona o leitor."
     }
 ]
